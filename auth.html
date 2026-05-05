@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup - Indumati</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for auth toggle */
+        .auth-tabs input[type="radio"] {
+            display: none;
+        }
+
+        .auth-tabs label {
+            flex: 1;
+            padding: 1rem;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .auth-tabs input[type="radio"]:checked + label {
+            background: #64b5f6;
+            color: #fff;
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        #login:checked ~ #login-form,
+        #signup:checked ~ #signup-form {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Indumati</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="auth.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Auth Container -->
+        <div class="auth-container">
+            <!-- Auth Tabs -->
+            <div class="auth-tabs">
+                <input type="radio" id="login" name="auth-toggle" checked>
+                <label for="login">Login</label>
+                <input type="radio" id="signup" name="auth-toggle">
+                <label for="signup">Sign Up</label>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <h3>Login to Your Account</h3>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+                    <a href="#" style="color: #64b5f6; text-decoration: none;">Forgot Password?</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form" class="auth-form">
+                <h3>Create Your Account</h3>
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    By signing up, you agree to our <a href="#" style="color: #64b5f6; text-decoration: none;">Terms of Service</a> and <a href="#" style="color: #64b5f6; text-decoration: none;">Privacy Policy</a>.
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Indumati</h4>
+                    <p>Smart Financial Solutions for Your Future</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@indumati.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Finance Street, Money City, MC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Indumati. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
