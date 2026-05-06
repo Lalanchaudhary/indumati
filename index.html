@@ -15,6 +15,24 @@
   gtag('config', 'AW-18142878376');
 </script>
 
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18142878376/NTl0CMunqKgcEKi1mctD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 </head>
 <body>
     <!-- Header -->
@@ -104,7 +122,7 @@
     </main>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/9135165706" class="whatsapp-btn" target="_blank" aria-label="Contact us on WhatsApp">
+    <a href="https://wa.me/9135165706" class="whatsapp-btn" target="_blank" aria-label="Contact us on WhatsApp" onclick="return gtag_report_conversion('https://wa.me/9135165706');">
         <span>💬</span>
     </a>
 
